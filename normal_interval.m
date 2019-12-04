@@ -6,5 +6,9 @@ function [lower_bound, upper_bound] = normal_interval(x)
 %   LOWER_BOUND : 1-by-1 double
 %   UPPER_BOUND : 1-by-1 double
 
+    [mean_x, median_x, std_x] = sum_up(x);
+    lower_bound = mean_x - std_x;
+    upper_bound = mean_x + std_x;
+    prop = (sum(x>=lower_bound &x<=upper_bound))/size(x, 1)
 
 end
