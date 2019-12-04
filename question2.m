@@ -6,8 +6,7 @@ function question2()
 end
 
 function pop = createPop()
-    pop = population(readtable('data.csv'), 13);
-    writetable(pop, 'population.csv');
+    pop = readtable('population.csv');
 end
 
 function answerQ2a(pop)
