@@ -5,6 +5,6 @@ function corr_xy = correlation(x, y)
 %   Y : N-by-1 double
 %   CORR_XY : 1-by-1 double
 
-
+	corr_xy = corrcoef(x,y);
 
 end
