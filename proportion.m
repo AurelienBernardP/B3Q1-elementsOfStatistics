@@ -7,6 +7,6 @@ function prop = proportion(x, y)
 %   PROP : 1-by-1 double
 
 	smithCharges = groupData(x.LastName == 'Smith', 7);
-	prop = (sum(x<=y & x> smithCharges))/size(x, 1);
+	prop = (sum(x.Charges<=y & x.Charges> smithCharges))/size(x, 1);
     
 end
