@@ -1,7 +1,6 @@
-
 function question3(size)
     
-    pop = readtable('test.csv');
+    pop = readtable('population.csv');
     x = pop.BMI;
     meanX = zeros(100:1);
     medianX = zeros(100:1);
