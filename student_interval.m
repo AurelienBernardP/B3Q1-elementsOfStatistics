@@ -10,7 +10,7 @@ function [lower_bound, upper_bound] = student_interval(x, perc)
 	sizeX = size(x, 1);
 	meanX = mean(x);
 	stdX = std(x);
-    t = tinv(1-((1-perc)/2), size-1);
+    t = tinv(1-((1-perc)/2), sizeX-1);
     
     lower_bound = meanX - t * (stdX/sqrt(sizeX));
     upper_bound = meanX + t * (stdX/sqrt(sizeX));
