@@ -1,7 +1,7 @@
+function question3d(perc)
 
-function question3d(x, perc)
-
-    x = x.BMI;
+    pop = readtable('population.csv');
+    x = pop.BMI;
     cptStudent = 0;
     cptGauss = 0;
     sigma = std(x);
