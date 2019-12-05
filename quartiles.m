@@ -6,6 +6,8 @@ function [first_q, second_q, third_q] = quartiles(x)
 %   SECOND_Q : 1-by-1 double
 %   THIRD_Q : 1-by-1 double
 
-   [first_q, second_q, third_q] = quartile(x);
+   first_q = quantile(x, 0.25);
+   second_q = quantile(x, 0.5);
+   third_q = quantile(x, 0.75);
 
 end
