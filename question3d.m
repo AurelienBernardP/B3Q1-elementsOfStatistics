@@ -1,6 +1,7 @@
 
-function [cptStudent, cptGauss] = answerQ3d(x, perc)
+function question3d(x, perc)
 
+    x = x.BMI;
     cptStudent = 0;
     cptGauss = 0;
     sigma = std(x);
@@ -9,7 +10,7 @@ function [cptStudent, cptGauss] = answerQ3d(x, perc)
     for i=1:100
         new_sample = iid_sample(x, 20);
         [lower_Student, upper_Student] = student_interval(new_sample, perc);
-        [lower_Gauss, upper_Gauss] = gauss_interval(new_sample, perc, sigma);
+        [lower_Gauss, upper_Gauss] = gauss_interval(new_sample, sigma, perc);
         
         if meanBMI >= lower_Student && meanBMI <= upper_Student
             cptStudent = cptStudent + 1;
@@ -21,5 +22,8 @@ function [cptStudent, cptGauss] = answerQ3d(x, perc)
 
     end
 
+    cptStudent
+    cptGauss
+    
 end
 
