@@ -1,7 +1,6 @@
 
-
 function question1()
-    pop = readtable('test.csv');
+    pop = readtable('population.csv');
     chargesPop = pop.Charges;
     
     figure()
